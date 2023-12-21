@@ -48,6 +48,8 @@ main {
   align-items: center;
   justify-content: center;
   color: #fff;
+  position: relative;
+  z-index: 100;
 
   &>div {
     display: flex;
