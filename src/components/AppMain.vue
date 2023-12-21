@@ -39,6 +39,9 @@ main {
   height: 100px;
   background-color: #000;
   color: #fff;
+  padding: 0 6rem;
+  display: flex;
+  align-items: center;
 }
 
 .shop {

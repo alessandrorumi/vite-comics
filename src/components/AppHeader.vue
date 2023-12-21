@@ -1,6 +1,62 @@
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      links: [
+        {
+          text: 'CHARACTERS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'COMICS',
+          url: '#',
+          current: true
+        },
+        {
+          text: 'MOVIES',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'TV',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'GAMES',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'COLLECTIBLES',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'VIDEOS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'FANS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'NEWS',
+          url: '#',
+          current: false
+        },
+        {
+          text: 'SHOP',
+          url: '#',
+          current: false
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -11,16 +67,7 @@ export default {
     </div>
     <nav>
       <ul>
-        <li><a href="">CHARACTERS</a></li>
-        <li><a href="">COMICS</a></li>
-        <li><a href="">MOVIES</a></li>
-        <li><a href="">TV</a></li>
-        <li><a href="">GAMES</a></li>
-        <li><a href="">COLLECTIBLES</a></li>
-        <li><a href="">VIDEOS</a></li>
-        <li><a href="">FANS</a></li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">SHOP</a></li>
+        <li v-for="link in links" :class="link.current ? 'active' : ''"><a :href="link.url">{{ link.text }}</a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +78,8 @@ header {
   height: 100px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 0 6rem;
 
   .logo {
     height: 100%;
@@ -44,17 +92,31 @@ header {
   }
 
   nav {
-    display: flex;
-    align-items: center;
 
     ul {
       display: flex;
+      height: 100%;
 
       li {
         margin: 0 1rem;
+        font-size: 13px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        a {
+          color: rgb(98, 98, 98);
+        }
       }
     }
   }
 
+  .active {
+    border-bottom: 5px solid #0282f9;
+
+    a {
+      color: #0282f9;
+    }
+  }
 }
 </style>
