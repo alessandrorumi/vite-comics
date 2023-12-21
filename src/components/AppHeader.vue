@@ -51,7 +51,7 @@ header {
       display: flex;
 
       li {
-        margin: 0 .75rem;
+        margin: 0 1rem;
       }
     }
   }
