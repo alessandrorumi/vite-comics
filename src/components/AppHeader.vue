@@ -74,17 +74,26 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
+.active {
+  border-bottom: 5px solid $primary;
+
+  a {
+    color: $primary;
+  }
+}
+
 header {
   height: 100px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  @include space-between;
   padding: 0 6rem;
 
   .logo {
     height: 100%;
-    display: flex;
-    align-items: center;
+    @include vertical-flex;
 
     img {
       height: 75%;
@@ -99,10 +108,7 @@ header {
 
       li {
         margin: 0 1rem;
-        font-size: 13px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
+        @include vertical-flex;
 
         a {
           color: rgb(98, 98, 98);
@@ -111,12 +117,6 @@ header {
     }
   }
 
-  .active {
-    border-bottom: 5px solid #0282f9;
 
-    a {
-      color: #0282f9;
-    }
-  }
 }
 </style>

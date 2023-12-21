@@ -91,13 +91,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
 .footer-top {
   height: 400px;
   background-image: url(../assets/img/footer-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  font-size: 12px;
+  font-size: .75rem;
   padding: 2rem 6rem;
 
   .footer-resources {
@@ -119,7 +122,7 @@ export default {
   h3 {
     color: #fff;
     margin: .75rem 0;
-    font-size: 18px;
+    font-size: 1.25rem;
   }
 
   .footer-logo-img {
@@ -138,8 +141,7 @@ export default {
   position: relative;
   z-index: 110;
   padding: 2rem 5rem;
-  display: flex;
-  justify-content: space-between;
+  @include space-between;
   align-items: center;
   padding: 0 6rem;
 
@@ -147,17 +149,15 @@ export default {
     a {
       color: #fff;
       padding: .85rem;
-      border: 3px solid #0282f9;
+      border: 3px solid $primary;
     }
   }
 
   .socials {
-    display: flex;
-    align-items: center;
+    @include vertical-flex;
 
     a {
-      color: #0282f9;
-      font-weight: bold;
+      color: $primary;
       margin-right: 2rem;
     }
 

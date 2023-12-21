@@ -35,28 +35,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
 main {
   height: 100px;
   background-color: #000;
   color: #fff;
   padding: 0 6rem;
-  display: flex;
-  align-items: center;
+  @include vertical-flex;
 }
 
 .shop {
   height: 150px;
-  background-color: #0282f9;
-  display: flex;
-  align-items: center;
+  background-color: $primary;
+  @include vertical-flex;
   justify-content: center;
   color: #fff;
   position: relative;
   z-index: 100;
 
   &>div {
-    display: flex;
-    align-items: center;
+    @include vertical-flex;
     height: 100%;
     margin: 1.75rem;
 
