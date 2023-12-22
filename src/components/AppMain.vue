@@ -90,6 +90,9 @@ export default {
 
 
 <template>
+  <div class="jumbo">
+    <img src="../assets/img/jumbotron.jpg" alt="">
+  </div>
   <main>
     <div class="current-series">
       <a href="#">CURRENT SERIES</a>
@@ -107,9 +110,26 @@ export default {
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
+.jumbo {
+  height: 350px;
+
+  img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
 main {
   background-color: #0d0d0d;
   color: $secondary;
+  position: relative;
+
+  .current-series {
+    position: absolute;
+    top: -.5rem;
+  }
 
   a {
     color: $secondary;
@@ -120,7 +140,7 @@ main {
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 4rem 0 0;
+    padding-top: 3rem;
   }
 
   .load-more {
