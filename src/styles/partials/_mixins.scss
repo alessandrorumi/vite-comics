@@ -1,9 +1,9 @@
-@mixin space-between {
+@mixin flex-between {
   display: flex;
   justify-content: space-between;
 }
 
-@mixin vertical-flex {
+@mixin flex-align-center {
   display: flex;
   align-items: center;
 }

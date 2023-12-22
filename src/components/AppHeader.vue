@@ -86,14 +86,12 @@ export default {
 }
 
 header {
-  height: 100px;
   width: 100%;
-  @include space-between;
-  padding: 0 6rem;
+  @include flex-between;
 
   .logo {
     height: 100%;
-    @include vertical-flex;
+    @include flex-align-center;
 
     img {
       height: 75%;
@@ -108,10 +106,10 @@ header {
 
       li {
         margin: 0 1rem;
-        @include vertical-flex;
+        @include flex-align-center;
 
         a {
-          color: rgb(98, 98, 98);
+          color: $grey;
         }
       }
     }

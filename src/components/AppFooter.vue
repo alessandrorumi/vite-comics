@@ -71,19 +71,19 @@ export default {
       <div class="socials">
         <a href="">FOLLOW US</a>
         <div class="facebook">
-          <img src="../assets/img/footer-facebook.png" alt="">
+          <a href="#"><img src="../assets/img/footer-facebook.png" alt=""></a>
         </div>
+        <a href="#"><img src="../assets/img/footer-twitter.png" alt=""></a>
         <div class="twitter">
-          <img src="../assets/img/footer-twitter.png" alt="">
         </div>
+        <a href="#"><img src="../assets/img/footer-youtube.png" alt=""></a>
         <div class="youtube">
-          <img src="../assets/img/footer-youtube.png" alt="">
         </div>
+        <a href="#"><img src="../assets/img/footer-pinterest.png" alt=""></a>
         <div class="pinterest">
-          <img src="../assets/img/footer-pinterest.png" alt="">
         </div>
+        <a href="#"><img src="../assets/img/footer-periscope.png" alt=""></a>
         <div class="location">
-          <img src="../assets/img/footer-periscope.png" alt="">
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@ export default {
   background-size: cover;
   position: relative;
   font-size: .75rem;
-  padding: 2rem 6rem;
+  padding: 1.5rem 6rem;
 
   .footer-resources {
     display: flex;
@@ -113,14 +113,14 @@ export default {
         line-height: 1.5rem;
 
         a {
-          color: #929292;
+          color: $grey;
         }
       }
     }
   }
 
   h3 {
-    color: #fff;
+    color: $secondary;
     margin: .75rem 0;
     font-size: 1.25rem;
   }
@@ -136,33 +136,26 @@ export default {
 }
 
 .footer-bottom {
-  height: 100px;
-  background-color: #303030;
+  background-color: $grey;
   position: relative;
   z-index: 110;
-  padding: 2rem 5rem;
-  @include space-between;
+  @include flex-between;
   align-items: center;
-  padding: 0 6rem;
 
   .sign-up {
     a {
-      color: #fff;
+      color: $secondary;
       padding: .85rem;
       border: 3px solid $primary;
     }
   }
 
   .socials {
-    @include vertical-flex;
+    @include flex-align-center;
 
     a {
       color: $primary;
       margin-right: 2rem;
-    }
-
-    &>div {
-      margin-right: 1rem;
     }
   }
 
